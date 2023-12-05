@@ -1,0 +1,25 @@
+{% extends "global_base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Navbar Hacking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('navbar_hacking.static', filename='navbar_hacking.css')}}" />
+    <script src="{{url_for('navbar_hacking.static', filename='navbar_hacking.js')}}"></script>
+  </head>
+  <body>
+        <ul>
+          <li><a href="#" data-text="Home" data-value="Home" >Home</a></li>
+          <li><a href="#" data-text="About" data-value="About" >About</a></li>
+          <li><a href="#" data-text="Services" data-value="Services" >Services</a></li>
+          <li><a href="#" data-text="Work" data-value="Work" >Work</a></li>
+          <li><a href="#" data-text="Team" data-value="Team" >Team</a></li>
+          <li><a href="#" data-text="Contact" data-value="Contact" >Contact</a></li>
+        </ul>
+  </body>
+</html>
+{% endblock %}

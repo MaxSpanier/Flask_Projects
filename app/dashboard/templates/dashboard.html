@@ -1,0 +1,25 @@
+{% extends "global_base.html" %}
+
+{% block head %}
+{{ super() }}
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{url_for('dashboard.static', filename='dashboard.css')}}" />
+
+{% endblock %}
+
+{% block content %}
+<h1>DASHBOARD</h1>
+
+<div class="wrapper">
+    {% for card in cards %}
+
+    <div class="card">
+        <h3> {{card.title}} </h3>
+        <p> {{card.description}} </p>
+        <button><a href={{ card.link }}> Link </a></button>
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

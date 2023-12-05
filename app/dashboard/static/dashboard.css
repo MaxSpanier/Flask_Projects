@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  height: auto;
+  margin: auto;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.card {
+  border: 2px solid black;
+  width: 15vw;
+  min-width: 15vw;
+  height: 15vh;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
