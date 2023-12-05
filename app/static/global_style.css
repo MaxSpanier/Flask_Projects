@@ -1,0 +1,17 @@
+.success {
+    color: green;
+    border: 2px solid green;
+}
+
+.error{
+    color: red;
+    border: 2px solid red;
+}
+
+.flash_message {
+    
+    margin: auto;
+    width: 20%;
+    border-radius: 25px;
+    text-align: center;
+}

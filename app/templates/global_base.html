@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links to stylesheets and js libraries/files -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='global_style.css') }}">
+
+    <!-- Title of the current page -->
+    <title>
+        {% block title %}
+            {% if title %}
+                {{ title }}
+            {% else %}
+                Testing
+            {% endif %}
+        {% endblock %}
+    </title>
+    {% endblock %}
+
+    {% block refs %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="body_container">
+        
+        <button> <a href="/main/index"> Index </a></button> <!--  -->
+        
+        <br>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, msg in messages %}
+                    <h3 class="{{ category }} flash_message">{{ msg }}</h3>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+    
+        {% block content %}
+        <h1> Hello Main Blueprint! </h1>
+        {% endblock %}
+    
+        {% block footer %}
+        <footer>
+            <hr><br>
+            &copy; Code and Design by Max Spanier. <br>
+        </footer>
+        {% endblock %}
+    </div>
+</body>
+</html>
